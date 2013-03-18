@@ -90,6 +90,7 @@ module Worktracker
 
     def initialize(data)
       @data = data
+      sanitize
     end
 
     def partition
@@ -101,14 +102,7 @@ module Worktracker
         acc += step[1].time - step[0].time
       end
     end
-
-    def group_by_project
-      data.group_by { |s| s.project }
-    end
-
-    def projects
-      group_by_project.keys
-    end
-
   end
+
 end
+

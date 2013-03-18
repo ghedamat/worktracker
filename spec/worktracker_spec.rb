@@ -53,6 +53,9 @@ describe Worktracker do
         Step.stop
       end.to change{Step.count}.by(2)
     end
+
+    it "should return today's elements"
+
   end
 
   it "extra test" do
